@@ -13,19 +13,35 @@ public class TransactionRecord {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private float amount;
-
     @ManyToOne
     private UserRecord sender;
 
     @ManyToOne
     private UserRecord recipient;
 
+    private Double amount;
+
     public TransactionRecord() {}
 
-    public TransactionRecord(UserRecord sender, UserRecord recipient, float amount) {
+    public TransactionRecord(UserRecord sender, UserRecord recipient, Double amount) {
         this.sender = sender;
         this.recipient = recipient;
         this.amount = amount;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public UserRecord getSender() {
+        return sender;
+    }
+
+    public UserRecord getRecipient() {
+        return recipient;
+    }
+
+    public Double getAmount() {
+        return amount;
     }
 }

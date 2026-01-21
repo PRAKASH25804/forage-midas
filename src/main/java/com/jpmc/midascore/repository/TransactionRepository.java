@@ -4,5 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.jpmc.midascore.entity.TransactionRecord;
 
-public interface TransactionRepository extends JpaRepository<TransactionRecord, Long> {
+public interface TransactionRepository
+        extends JpaRepository<TransactionRecord, Long> {
 }
